@@ -12,11 +12,11 @@ root = tk.Tk()
 root.withdraw()
 path = filedialog.askdirectory()
 
-# Creation sub folder
+# Sub-Folder creation
 output_dir = os.path.join(path, "converted_jpg")
 os.makedirs(output_dir, exist_ok=True)
 
-# Extensions valides
+# Valids extentions
 valid_images = [".heic"]
 
 # Conversion
@@ -29,7 +29,7 @@ for f in os.listdir(path):
         img = Image.open(img_path).convert("RGB")  # Needed for JPEG
         new_name = os.path.splitext(f)[0] + ".jpg"
         save_path = os.path.join(output_dir, new_name)
-        img.save(save_path, "JPEG", quality=95) #set a 95 so that the file doesnt become huge
+        img.save(save_path, "JPEG", quality=95) #set at 95 so that the file doesnt become huge
         print(f"Converti : {f} -> {new_name}")
     except Exception as e:
         print(f"Erreur sur {f} : {e}")
