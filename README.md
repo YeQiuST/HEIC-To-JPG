@@ -23,3 +23,6 @@ The script will:
 -  Create a subfolder called converted_jpg inside the selected folder.
 
 -  Save all converted .jpg images into that subfolder with the same filenames.
+
+
+You can also just download the exe file in the dist folder and simply use the program without any commands / installation 
